@@ -18,7 +18,7 @@ shinyServer(function(input, output) {
                        size = input$size,
                        shape = input$shape,
                        wind_direction = input$wind_direction,
-                       scenario = "A2"))
+                       scenario = "A2")) # CHANGE THIS LINE IF SCENARIO 1 IS ADDED 
         
   })
   
