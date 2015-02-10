@@ -9,6 +9,7 @@ data <- data[,c("TOTALN",
               "initial_perc_SAV_cover",
               "size",
               "shape",
-              "wind_direction")]
+              "wind_direction",
+              "scenario")]
   
   

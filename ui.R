@@ -14,7 +14,6 @@ shinyUI(pageWithSidebar(
                 choices=c(1,2,3,4,5,6,7,8,9),
                 selected=5
     ),
-
     selectInput("initial_perc_FP_cover", 
                 "Initial FP cover(%):",
                 choices=c(1,5,15,30,45),
@@ -24,10 +23,7 @@ shinyUI(pageWithSidebar(
                 "Initial SAV cover(%):",
                 choices=c(1,5,15,30,45),
                 selected=15
-    ),
-    
-    ### DOUBLE CHECK THAT THIS SECTION IS RIGHT ###
-    
+    ),    
     selectInput("size", 
                 "Water body size:",
                 choices=list("0.04 ha"="small",
@@ -38,20 +34,19 @@ shinyUI(pageWithSidebar(
     ), 
     selectInput("shape", 
                 "Water body shape:",
-                choices=list("tee"="tee",
-                             "cross"="cross",
-                             "eight"="eight",
-                             "hook"="hook",
-                             "rectangle"="rectangle")
+                choices=list("Tee"="tee",
+                             "Cross"="cross",
+                             "Eight"="eight",
+                             "Hook"="hook",
+                             "Rectangle"="rectangle"),
+                selected="rectangle"
     ), 
     selectInput("wind_direction", 
                 "Wind direction:",
                 choices=list("Up"="up",
-                             "Random"="all")
+                             "Random"="all"),
+                selected="all"
     ), 
-    
-    ### DOUBLE CHECK THAT THIS SECTION IS RIGHT ###
-    
     hr(),
     strong("Simulation number:"),
     textOutput("simulation")

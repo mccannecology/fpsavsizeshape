@@ -17,7 +17,8 @@ shinyServer(function(input, output) {
                        initial_perc_SAV_cover = input$initial_perc_SAV_cover,
                        size = input$size,
                        shape = input$shape,
-                       wind_direction = input$wind_direction))
+                       wind_direction = input$wind_direction,
+                       scenario = "A2"))
         
   })
   
@@ -229,7 +230,7 @@ shinyServer(function(input, output) {
   
     # URL varies depending on input 
     url <- paste("https://s3.amazonaws.com/fpsavsizeshape/AltState/",
-                 "alt_plot_",
+                 "alt_plot__",
                  TOTALN(),"_",
                  size(),"_",
                  shape(),"_",
