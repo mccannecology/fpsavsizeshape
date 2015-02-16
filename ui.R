@@ -12,16 +12,16 @@ shinyUI(pageWithSidebar(
     selectInput("TOTALN", 
                 "Total N (mg/L):",
                 choices=c(1,2,3,4,5,6,7,8,9),
-                selected=5
+                selected=3
     ),
     selectInput("initial_perc_FP_cover", 
                 "Initial FP cover(%):",
-                choices=c(1,5,15,30,45),
+                choices=c(1,5,15,30),
                 selected=15
     ),
     selectInput("initial_perc_SAV_cover", 
                 "Initial SAV cover(%):",
-                choices=c(1,5,15,30,45),
+                choices=c(1,5,15,30),
                 selected=15
     ),    
     selectInput("size", 
@@ -30,7 +30,8 @@ shinyUI(pageWithSidebar(
                              "1 ha"="med1",
                              "2.25 ha"="med2",
                              "6.25 ha"="large",
-                             "9 ha"="XL")
+                             "9 ha"="XL"),
+                selected="med1"
     ), 
     selectInput("shape", 
                 "Water body shape:",
