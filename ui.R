@@ -47,6 +47,12 @@ shinyUI(pageWithSidebar(
                 choices=list("Up"="up",
                              "Random"="all"),
                 selected="all"
+    ),
+    selectInput("scenario", 
+                "Wind-scaling:",
+                choices=list("Weak"="A1",
+                             "Strong"="A2"),
+                selected="A1"
     ), 
     hr(),
     strong("Simulation number:"),
@@ -93,7 +99,7 @@ shinyUI(pageWithSidebar(
         HTML("mccannecology.weebly.com"),
         br(),
         br(),
-        HTML("<I>Last updated: 4 February 2015.</I>"),
+        HTML("<I>Last updated: 3 March 2015.</I>"),
         br(),
         br()
         ),

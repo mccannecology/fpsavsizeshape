@@ -18,7 +18,7 @@ shinyServer(function(input, output) {
                        size = input$size,
                        shape = input$shape,
                        wind_direction = input$wind_direction,
-                       scenario = "A2")) # CHANGE THIS LINE IF SCENARIO 1 IS ADDED 
+                       scenario = input$scenario)) 
         
   })
   
@@ -55,6 +55,10 @@ shinyServer(function(input, output) {
   
   wind_direction <- reactive({
     input$wind_direction
+  })
+  
+  scenario <- reactive({
+    input$scenario
   })
   
   ###########
@@ -235,6 +239,7 @@ shinyServer(function(input, output) {
                  size(),"_",
                  shape(),"_",
                  wind_direction(),"_",
+                 scenario(),"_",
                  ".jpg",sep="")
     
     download(url,"altstate.jpg",mode="wb")
