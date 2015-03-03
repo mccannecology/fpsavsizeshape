@@ -267,4 +267,14 @@ shinyServer(function(input, output) {
   
   }, deleteFile = FALSE)
   
+  # PICTURE OF Wind-scaling
+  # if images are saved locally
+  output$wind_scaling <- renderImage({
+    
+    filename <- file.path("./www/wind_scaling_with_size_figure.jpg")
+    
+    # Return a list containing the filename and alt text
+    list(src = filename, contentType = "image/jpg")
+    
+  }, deleteFile = FALSE)
 })

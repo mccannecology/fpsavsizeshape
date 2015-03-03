@@ -84,6 +84,14 @@ shinyUI(pageWithSidebar(
         HTML("<strong> - Alt. States:</strong> Plot summarizing multiple simulations from different initial conditions."),
         br(),
         br(),
+        h3("Wind-scaling:"),
+        HTML("<strong>Wind-scaling</strong> describes how strongly wind-strength scales with increasing water body size. "),
+        HTML("Here you can view the frequency distribution of the beta distribuions used to sample wind strength.
+          The top row represents <strong>Weak</strong> and the bottom row represents <strong>Strong</strong> 
+             wind-scaling"),
+        imageOutput("wind_scaling",height="100%",width="100%"),
+        br(),
+        br(),
         h3("Contact:"),
         p("Please direct any comments, questions, or error reports to:"),
         HTML("<strong>Michael J. McCann</strong>"),
